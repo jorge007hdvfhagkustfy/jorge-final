@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>replit</title>
+  <style>
+    html, body{margin:0}
+    div {width:100%; height: 100vh; background-size: cover; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+    #div1{background-image: url("mates1.jpg");}
+    #div2{background-image: url("mates2.jpg");}
+    h1,p {margin: 0; font-weight: bolder; color: orange;}
+    #numeros{font-size: 7rem; background-color: rgb(17, 19, 16);}
+    #cuadrados{font-size: 7rem; background-color: rgb(31, 40, 35);}
+  </style>
+</head>
+
+<body>
+  <div id="div1">
+    <p>Los cuadrados de: </p>
+    <h1 id="numeros"></h1>
+  </div>
+  <div id="div2">
+    <p>Son: </p>
+    <h1 id="cuadrados"></h1>
+  </div>
+  <script>
+    let a = [1,2,7,4,5,6,3,8,9]; // desordeno a proposito el array para ordenarlo despues con el metodo .sort
+    a.sort(); // nos ordena alfabeticamente un array, para numeros con mas digitos hay q usar la funcion de comparacion a.sort(function (a,b){return a-b})
+    let b = a.map(elev2) // metodo map muy interesante para trabajar con un array
+
+    document.getElementById("numeros").innerHTML = a;
+    document.getElementById("cuadrados").innerHTML = b;
+
+    function elev2(elemento){
+      return elemento**2}
+  </script>
+</body>
+
+</html>
